@@ -1,0 +1,17 @@
+sudo yum groupinstall -y "Development Tools"
+sudo yum install -y openssl-devel bzip2-devel libffi-devel
+cd /usr/src
+sudo wget https://www.python.org/ftp/python/2.7.18/Python-2.7.18.tgz
+sudo tar xzf Python-2.7.18.tgz
+cd Python-2.7.18
+sudo ./configure --enable-optimizations
+sudo make altinstall
+python2.7 -V
+wget https://bootstrap.pypa.io/pip/2.7/get-pip.py
+python get-pip.py
+pip install Flask
+pip install boto
+pip install configparser
+yum install git -y
+cd /home/ec2-user/
+https://github.com/himajakbk/tictactoe-with-DynamoDB.git
